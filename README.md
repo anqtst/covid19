@@ -1,4 +1,5 @@
-// Just run this code in Java IDE
+// Run this code in Java IDE
+// Don't forget org.json jar
 
 package dlfn3;
 import java.io.*;
