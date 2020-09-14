@@ -97,8 +97,7 @@ Arrays.deepToString(oj)+"\nmmm -sort array:\n"+Arrays.deepToString(mmm)
 +"\n"+"hm -hashmap:\n"+hm+"\nh1 -map1:\n"+h1+"\nh2 -map2:\n"+h2+"\n");*/
 
 i=185;while(i>-1){
-System.out.println(mmm[i][0]+
-": died 1 in "+
+System.out.println(mmm[i][0]+": died 1 in "+
 Integer.toString((int)mmm[i][1])+" "+mmm[i][2]);i--;}
 System.out.println("\nData from:\n"+qq+"\n"+qy+"\n\n"+dt+"\nWorld dead: "+td+"\ntotal case: "+gc+"\npopulation: "+tp+"\ndeath/pop.: 1 in "+tp/td+"\ncases/pop.: 1 in "+tp/gc+"\ndied/cases: 1 in "+gc/td+"\n\n"+nn+"\n"+dc+" in "+cp+" covid "+ct+"\ndead: "+e+" in "+cp/cd+"\ncase: 1 in "+cp/ct+"\ndied: "+e+" in "+ct/cd);
 
@@ -117,14 +116,8 @@ while((ot3=in3.readLine())!=null){oo3=oo3+"\n"+ot3;}
 JSONArray o33=new JSONArray(oo3);
 c01=(int)o33.getJSONObject(0).get("Cases"); c14=(int)o33.getJSONObject(14).get("Cases");
 rk=c14-c01;kk=rk*100000/cp;
-System.out.println(
-
-t02+" <==> "+t15
-+"\n<"+c14+"-"+c01+"> "+(c14-c01)+" in "+cp
-+"\n"+
-"Last 2 weeks in 100 000: "+kk
-);}oo3="";}}}
-i4=i0;
+System.out.println(t02+" <==> "+t15+"\n<"+c14+"-"+c01+"> "+(c14-c01)+" in "+cp+"\n"+"Last 2 weeks in 100 000: "+kk);
+}oo3="";}}}i4=i0;
 LocalDate t01=LocalDate.now().minusDays(1);
 LocalDate t14=LocalDate.now().minusDays(16+i0);
 q3="https://api.covid19api.com/country/"+nn+"/status/confirmed?from="+t14+"&to="+t01;
@@ -138,13 +131,11 @@ c01=(int)o33.getJSONObject(0+i0).get("Cases");
 c14=(int)o33.getJSONObject(14+i0).get("Cases");
 rk=c14-c01;kk=rk*100000/cp;
 LocalDate t0=LocalDate.now().minusDays(i4-i0);q3=t0+" K.quarantine: ";
-
 //System.out.println(q3+kk);
 
 for(k=kk/2;k>0;k--)z=z+">";
 if(kk>25)z=" >=>=>=>=>=>=>";
 System.out.println(t0+z+" "+kk);z=" ";
-
 i0--;}
 //;System.out.println(0);
 }catch(Throwable cs){cs.printStackTrace();}q.close();
