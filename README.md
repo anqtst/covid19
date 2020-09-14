@@ -1,5 +1,6 @@
 // Run this code in Java IDE
 // Don't forget org.json jar
+// Enter country code DE, EE, IT... 
 
 package dlfn3;
 import java.io.*;
