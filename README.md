@@ -151,6 +151,10 @@ i0--;}
 }catch(Throwable cs){cs.printStackTrace();}q.close();
 //System.out.println("\nVariables Names\nCovid: qq -Site; oo -Data; o3 -Json\nCodes: qy -Site; vo -Data; pn -Json\nTotal: dt -Date; td -Dead; tp -Pop.\nLocal: nn -Name; cd -Dead; cp -Pop.\n");
 }}
+
+// Copy this code in your java IDE and run
+// from here
+
 package dlfn3;
 import java.io.*;
 import java.net.*;
@@ -304,5 +308,8 @@ i0--;}
 }catch(Throwable cs){cs.printStackTrace();}q.close();
 //System.out.println("\nVariables Names\nCovid: qq -Site; oo -Data; o3 -Json\nCodes: qy -Site; vo -Data; pn -Json\nTotal: dt -Date; td -Dead; tp -Pop.\nLocal: nn -Name; cd -Dead; cp -Pop.\n");
 }}
+
+// to here
+
 # covid19
 # covid19
