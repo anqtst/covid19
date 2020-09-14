@@ -304,3 +304,4 @@ i0--;}
 }catch(Throwable cs){cs.printStackTrace();}q.close();
 //System.out.println("\nVariables Names\nCovid: qq -Site; oo -Data; o3 -Json\nCodes: qy -Site; vo -Data; pn -Json\nTotal: dt -Date; td -Dead; tp -Pop.\nLocal: nn -Name; cd -Dead; cp -Pop.\n");
 }}
+# covid19
