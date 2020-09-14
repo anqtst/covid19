@@ -20,12 +20,12 @@ if(ccc.getResponseCode()==200)
 {BufferedReader in1=new BufferedReader(new InputStreamReader(ccc.getInputStream()));
 while((ov=in1.readLine())!=null){vo=vo+"\n"+ov;}
 while(!q1.equals("0"))
-{System.out.println("\nCode?(0>Exit)");q1=q.next();i=ii=0;tp=0;
+{System.out.println("\nCode?(or 0>Exit 1>EE 2>BG 3>AT)");q1=q.next();i=ii=0;tp=0;
 
-if(q1.equals("EE")||
-q1.equals("BG")||q1.equals("AT")
-||q1.equals("LV")||q1.equals("FI")
-)i0=200;
+if(q1.equals("1")){i0=200;q1="EE";}
+if(q1.equals("2")){i0=200;q1="BG";}
+if(q1.equals("3")){i0=200;q1="AT";}
+if(q1.equals("TR")||q1.equals("PL")||q1.equals("SE")||q1.equals("LV")||q1.equals("FI"))i0=200;
 //else i0=20;
 
 dt=(String)o3.get("Date");
