@@ -29,37 +29,36 @@ q1.equals("BG")||q1.equals("AT")
 //else i0=20;
 
 dt=(String)o3.get("Date");
-                    td=(int)o3.getJSONObject("Global").get("TotalDeaths");
-                    gc=(int)o3.getJSONObject("Global").get("TotalConfirmed");
+td=(int)o3.getJSONObject("Global").get("TotalDeaths");
+gc=(int)o3.getJSONObject("Global").get("TotalConfirmed");
 
 Object[][]oj=new Object[186][3];
-                    HashMap<String,Integer>hm=new HashMap<String,Integer>();
+HashMap<String,Integer>hm=new HashMap<String,Integer>();
 
 while(i<186)
-                    {tdt=(int)o3.getJSONArray("Countries").getJSONObject(i).get("TotalDeaths");
-                        cy=(String)o3.getJSONArray("Countries").getJSONObject(i).get("CountryCode");
-                        tc=(int)o3.getJSONArray("Countries").getJSONObject(i).get("TotalConfirmed");oj[i][0]=cy;oj[i][1]=tdt;
+{tdt=(int)o3.getJSONArray("Countries").getJSONObject(i).get("TotalDeaths");
+cy=(String)o3.getJSONArray("Countries").getJSONObject(i).get("CountryCode");
+tc=(int)o3.getJSONArray("Countries").getJSONObject(i).get("TotalConfirmed");oj[i][0]=cy;oj[i][1]=tdt;
 hm.put(cy,tdt);
 if(cy.equals(q1))
 {ct=tc;if(tdt!=0){dc=cd=tdt;e=1;}
-                        else{cd=1;dc=e=0;}
+else{cd=1;dc=e=0;}
 //System.out.println(cy+" covid dead: "+tdt+"\n"+cy+" covid case: "+tc);
-                            
 }i++;}
 
 JSONArray pn=new JSONArray(vo);
 Object[][]oi=new Object[250][3];
-                    HashMap<String,Integer>h1=new HashMap<String,Integer>();
-                    HashMap<String,Integer>h2=new HashMap<String,Integer>();
+HashMap<String,Integer>h1=new HashMap<String,Integer>();
+HashMap<String,Integer>h2=new HashMap<String,Integer>();
 
 while(ii<250)
-                    {pp=(int)pn.getJSONObject(ii).get("population");
-                        c2=(String)pn.getJSONObject(ii).get("alpha2Code");
-                        ne=(String)pn.getJSONObject(ii).get("name");
-                        oi[ii][2]=ne;
-                        oi[ii][0]=c2;oi[ii][1]=pp;
-                        h1.put(c2,pp);h2.put(ne,pp);
-                        if(c2.equals(q1)){cp=pp;nn=(String)pn.getJSONObject(ii).get("name");
+{pp=(int)pn.getJSONObject(ii).get("population");
+c2=(String)pn.getJSONObject(ii).get("alpha2Code");
+ne=(String)pn.getJSONObject(ii).get("name");
+oi[ii][2]=ne;
+oi[ii][0]=c2;oi[ii][1]=pp;
+h1.put(c2,pp);h2.put(ne,pp);
+if(c2.equals(q1)){cp=pp;nn=(String)pn.getJSONObject(ii).get("name");
 //System.out.println(c2+" population: "+pp+"\n"+nn+" ...timeout "+ts+" sec...\n");
 }tp=tp+pp;ii++;}
 
@@ -75,7 +74,7 @@ if(mm0.equals(mn0))
 {if(mm1!=0)mm=mn1/mm1;
 else mm=mn1*10;
 String mn2=(String)oi[ii][2];
-                            System.out.println(mm0+" "+mm1+" <"+mn1+"> "+mm+" "+mn2);
+System.out.println(mm0+" "+mm1+" <"+mn1+"> "+mm+" "+mn2);
 ii=250;mmm[i][2]=mn2;
 mmm[i][1]=mm;mmm[i][0]=mm0;}
 ii++;}i++;};
@@ -107,18 +106,18 @@ LocalDate t01=LocalDate.now().minusDays(1);
 LocalDate t14=LocalDate.now().minusDays(16);
 LocalDate t02=LocalDate.now().minusDays(2);
 LocalDate t15=LocalDate.now().minusDays(15);
- q3="https://api.covid19api.com/country/"+nn+"/status/confirmed?from="+t14+"&to="+t01;
+q3="https://api.covid19api.com/country/"+nn+"/status/confirmed?from="+t14+"&to="+t01;
 
 cc3=(HttpURLConnection)new URL(q3).openConnection();
 cc3.connect();
 if(cc3.getResponseCode()==200){
-                        BufferedReader in3=new BufferedReader(new InputStreamReader(cc3.getInputStream()));
-                        while((ot3=in3.readLine())!=null){oo3=oo3+"\n"+ot3;}
+BufferedReader in3=new BufferedReader(new InputStreamReader(cc3.getInputStream()));
+while((ot3=in3.readLine())!=null){oo3=oo3+"\n"+ot3;}
 //System.out.println(oo3+"\n"+q3);
 JSONArray o33=new JSONArray(oo3);
-            c01=(int)o33.getJSONObject(0).get("Cases"); c14=(int)o33.getJSONObject(14).get("Cases");
+c01=(int)o33.getJSONObject(0).get("Cases"); c14=(int)o33.getJSONObject(14).get("Cases");
 rk=c14-c01;kk=rk*100000/cp;
-                        System.out.println(
+System.out.println(
 
 t02+" <==> "+t15
 +"\n<"+c14+"-"+c01+"> "+(c14-c01)+" in "+cp
@@ -131,7 +130,7 @@ LocalDate t14=LocalDate.now().minusDays(16+i0);
 q3="https://api.covid19api.com/country/"+nn+"/status/confirmed?from="+t14+"&to="+t01;
 cc3=(HttpURLConnection)new URL(q3).openConnection();cc3.connect();
 if(cc3.getResponseCode()==200){BufferedReader in3=new BufferedReader(new InputStreamReader(cc3.getInputStream()));
-            while((ot3=in3.readLine())!=null){oo3=oo3+"\n"+ot3;}}
+while((ot3=in3.readLine())!=null){oo3=oo3+"\n"+ot3;}}
 //System.out.println("\n"+q3);
 JSONArray o33=new JSONArray(oo3);
 while(i0>0){
@@ -151,4 +150,3 @@ i0--;}
 }catch(Throwable cs){cs.printStackTrace();}q.close();
 //System.out.println("\nVariables Names\nCovid: qq -Site; oo -Data; o3 -Json\nCodes: qy -Site; vo -Data; pn -Json\nTotal: dt -Date; td -Dead; tp -Pop.\nLocal: nn -Name; cd -Dead; cp -Pop.\n");
 }}
-# covid19
